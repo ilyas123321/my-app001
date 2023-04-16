@@ -5,6 +5,12 @@ pipeline {
     maven 'maven2'
   }
   stages{
+    stage("Testing webhook"){
+      steps{
+        echo "testing webhook"
+      }
+    }
+  stages{
     stage("Maven Build"){
       steps{
         sh "mvn clean package"
